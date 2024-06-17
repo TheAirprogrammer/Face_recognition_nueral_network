@@ -4,6 +4,7 @@ import os
 
 ANC_PATH = 'data/anchor'
 POS_PATH = 'data/positive'
+INP_PATH = 'app_data/input_image'
 
 def save_image(path, frame):
     """Saves the frame to the specified path."""
@@ -35,7 +36,6 @@ else:
                 save_image(ANC_PATH, cropped_frame)
             elif key == ord('p'):  # Collect positive
                 save_image(POS_PATH, cropped_frame)
-            
             if not ret:
                 print("Error: Failed to capture image.")
                 break
